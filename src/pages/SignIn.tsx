@@ -14,7 +14,7 @@ const SignIn: React.FC = () => {
   };
 
   return (
-    <div className="w-full max-w-[440px] px-container-padding py-2xl mt-16">
+    <div className="w-full px-container-padding py-2xl mt-16">
       <div className="bg-surface-container-lowest p-xl rounded-xl shadow-[0px_4px_6px_rgba(0,0,0,0.05)] border border-outline-variant">
         <div className="mb-xl text-center">
           <div className="inline-flex items-center justify-center w-12 h-12 bg-primary-container text-white rounded-lg mb-md">

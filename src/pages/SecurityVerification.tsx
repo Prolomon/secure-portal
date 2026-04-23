@@ -22,7 +22,7 @@ const SecurityVerification: React.FC = () => {
   };
 
   return (
-    <div className="max-w-md w-full px-lg pt-2xl pb-xl mt-16">
+    <div className="w-full px-lg pt-2xl pb-xl mt-16">
       <div className="bg-white rounded-xl shadow-[0px_4px_6px_rgba(0,0,0,0.05)] p-xl border border-slate-100">
         <div className="text-center mb-xl">
           <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary-container/10 mb-md">

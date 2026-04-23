@@ -33,10 +33,10 @@ const UpdatePassword: React.FC = () => {
   };
 
   return (
-    <div className="w-full max-w-5xl px-container-padding pt-24 pb-xl mt-16">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-xl items-start">
-        {/* Left: Form Card */}
-        <div className="lg:col-span-7">
+    <div className="w-full px-container-padding pt-24 pb-xl mt-16">
+      <div className="grid grid-cols-1 gap-xl items-start">
+        {/* Top: Form Card */}
+        <div className="w-full">
           <div className="bg-white rounded-xl shadow-[0px_4px_6px_rgba(0,0,0,0.05)] p-lg md:p-xl border border-slate-100">
             <div className="mb-xl">
               <h1 className="font-h1 text-h1 text-on-background mb-sm">Update Password</h1>
@@ -168,8 +168,8 @@ const UpdatePassword: React.FC = () => {
           </div>
         </div>
 
-        {/* Right: Safety Tips & Visuals */}
-        <div className="lg:col-span-5 space-y-lg">
+        {/* Bottom: Safety Tips & Visuals */}
+        <div className="w-full space-y-lg">
           {/* Safety Tips Card */}
           <div className="bg-surface-container rounded-xl p-lg border border-outline-variant/30">
             <div className="flex items-center gap-sm mb-md">

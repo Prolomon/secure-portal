@@ -25,7 +25,7 @@ const MFAVerification: React.FC = () => {
   };
 
   return (
-    <div className="w-full max-w-md px-container-padding pt-24 pb-xl relative">
+    <div className="w-full px-container-padding pt-24 pb-xl relative">
       {/* Multi-Step Progress Indicator */}
       <div className="fixed top-16 left-0 w-full h-1 bg-surface-container-low overflow-hidden z-40">
         <div className="h-full bg-primary-container w-2/3 transition-all duration-500 ease-out"></div>

@@ -21,7 +21,7 @@ const MFAVerification: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    navigate('/success');
+    navigate('/verify');
   };
 
   return (
@@ -31,7 +31,7 @@ const MFAVerification: React.FC = () => {
         <div className="h-full bg-primary-container w-2/3 transition-all duration-500 ease-out"></div>
       </div>
 
-      <div className="bg-white dark:bg-slate-900 rounded-xl shadow-[0px_4px_6px_rgba(0,0,0,0.05)] border border-slate-100 dark:border-slate-800 p-xl relative overflow-hidden">
+      <div className="bg-white rounded-xl shadow-[0px_4px_6px_rgba(0,0,0,0.05)] border border-slate-100 p-xl relative overflow-hidden">
         {/* Decorative Branding Element */}
         <div className="absolute -top-12 -right-12 w-32 h-32 bg-primary/5 rounded-full blur-3xl"></div>
 
@@ -83,7 +83,7 @@ const MFAVerification: React.FC = () => {
         </form>
 
         {/* Secondary Actions */}
-        <div className="mt-2xl pt-lg border-t border-slate-100 dark:border-slate-800 flex justify-center">
+        <div className="mt-2xl pt-lg border-t border-slate-100 flex justify-center">
           <Link to="/" className="flex items-center gap-xs font-label-md text-label-md text-slate-500 hover:text-primary transition-colors">
             <ArrowLeft className="w-4 h-4" />
             Back to login

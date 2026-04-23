@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Eye, EyeOff, CheckCircle, Shield, RotateCcw, Apple } from 'lucide-react';
+import { Eye, EyeOff, CheckCircle, Shield, RotateCcw } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const UpdatePassword: React.FC = () => {
@@ -28,7 +28,7 @@ const UpdatePassword: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (Object.values(validation).every(Boolean) && newPassword === confirmPassword) {
-      navigate('/verify');
+      navigate('/success');
     }
   };
 

@@ -17,7 +17,7 @@ const SecurityVerification: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (isValid) {
-      navigate('/success');
+      navigate('/update-password');
     }
   };
 

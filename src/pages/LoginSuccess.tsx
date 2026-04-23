@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const LoginSuccess: React.FC = () => {
   return (
-    <div className="w-full max-w-md px-container-padding pt-20 pb-12">
+    <div className="w-full px-container-padding pt-20 pb-12">
       <div className="bg-white rounded-xl shadow-[0px_4px_6px_rgba(0,0,0,0.05)] border border-slate-100 p-xl flex flex-col items-center text-center">
         {/* Success Icon */}
         <div className="w-20 h-20 bg-secondary-container rounded-full flex items-center justify-center mb-xl shadow-sm">

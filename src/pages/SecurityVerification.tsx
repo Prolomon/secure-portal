@@ -58,6 +58,43 @@ const SecurityVerification: React.FC = () => {
             )}
           </div>
 
+          {!isValid && (
+            <div className="pt-md border-t border-slate-100">
+              <div className="flex items-start gap-md p-md bg-surface-container-low rounded-lg">
+                <Info className="w-5 h-5 text-slate-500 mt-0.5" />
+                <div>
+                  <p className="font-label-sm text-label-sm text-on-surface-variant">Password requirements:</p>
+                  <ul className="mt-xs space-y-xs font-label-sm text-label-sm text-slate-500">
+                    <li className="flex items-center gap-xs">
+                      {validation.length ?
+                        <CheckCircle className="w-3.5 h-3.5 text-secondary fill-secondary text-white" /> :
+                        <div className="w-3.5 h-3.5 rounded-full border border-slate-300" />
+                      }
+                      At least 8 characters
+                    </li>
+                    <li className="flex items-center gap-xs">
+                      {validation.hasNumber ?
+                        <CheckCircle className="w-3.5 h-3.5 text-secondary fill-secondary text-white" /> :
+                        (password.length > 0 ?
+                          <XCircle className="w-3.5 h-3.5 text-error fill-error text-white" /> :
+                          <div className="w-3.5 h-3.5 rounded-full border border-slate-300" />
+                        )
+                      }
+                      Include at least one number
+                    </li>
+                    <li className="flex items-center gap-xs">
+                      {validation.hasSpecial ?
+                        <CheckCircle className="w-3.5 h-3.5 text-secondary fill-secondary text-white" /> :
+                        <div className="w-3.5 h-3.5 rounded-full border border-slate-300" />
+                      }
+                      One special character
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          )}
+
           <div className="space-y-md">
             <button
               className="w-full h-12 bg-primary-container hover:bg-primary-container/90 text-white font-button text-button rounded-lg shadow-sm transition-all active:scale-[0.98] disabled:opacity-50"
@@ -76,40 +113,6 @@ const SecurityVerification: React.FC = () => {
           </div>
         </form>
 
-        <div className="mt-xl pt-lg border-t border-slate-100">
-          <div className="flex items-start gap-md p-md bg-surface-container-low rounded-lg">
-            <Info className="w-5 h-5 text-slate-500 mt-0.5" />
-            <div>
-              <p className="font-label-sm text-label-sm text-on-surface-variant">Password requirements:</p>
-              <ul className="mt-xs space-y-xs font-label-sm text-label-sm text-slate-500">
-                <li className="flex items-center gap-xs">
-                  {validation.length ?
-                    <CheckCircle className="w-3.5 h-3.5 text-secondary fill-secondary text-white" /> :
-                    <div className="w-3.5 h-3.5 rounded-full border border-slate-300" />
-                  }
-                  At least 8 characters
-                </li>
-                <li className="flex items-center gap-xs">
-                  {validation.hasNumber ?
-                    <CheckCircle className="w-3.5 h-3.5 text-secondary fill-secondary text-white" /> :
-                    (password.length > 0 ?
-                      <XCircle className="w-3.5 h-3.5 text-error fill-error text-white" /> :
-                      <div className="w-3.5 h-3.5 rounded-full border border-slate-300" />
-                    )
-                  }
-                  Include at least one number
-                </li>
-                <li className="flex items-center gap-xs">
-                  {validation.hasSpecial ?
-                    <CheckCircle className="w-3.5 h-3.5 text-secondary fill-secondary text-white" /> :
-                    <div className="w-3.5 h-3.5 rounded-full border border-slate-300" />
-                  }
-                  One special character
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
       </div>
 
       <div className="mt-lg text-center">
